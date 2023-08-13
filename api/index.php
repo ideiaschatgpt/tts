@@ -30,7 +30,7 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer data-domain="weilbyte.github.io/tiktok-tts" src="https://plausible.io/js/plausible.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <title>Converter Texto em Voz</title>
     <style>
         #funny:hover {
