@@ -30,7 +30,7 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer data-domain="weilbyte.github.io/tiktok-tts" src="https://plausible.io/js/plausible.js"></script>
-    <script src="https://ideiaschatgpt.site/tts/script.js"></script>
+    <script src="api/script.js"></script>
     <title>Converter Texto em Voz</title>
     <style>
         #funny:hover {
@@ -60,7 +60,7 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
 </head>
 <body class="flex flex-col" style="background-color: #F5F5F4">
     <div class="bg-stone-100 p-12 grow">
-        <img src="https://ideiaschatgpt.site/tts/logo.png" width="64px" height="64px" class="mx-auto"/>
+        <img src="api/logo.png" width="64px" height="64px" class="mx-auto"/>
         <center class="text-6xl font-bold text-center">
             Ideias TTS
         </center>
