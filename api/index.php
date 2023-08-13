@@ -44,28 +44,15 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
             font-weight:bold;
         }
     </style>
-        <script>
-        function pasteText() {
-    navigator.clipboard.readText()
-        .then(text => {
-            document.getElementById('text').value = text;
-            onTextareaInput();
-        })
-        .catch(err => {
-            console.error('Falha ao colar texto:', err);
-        });
-}
-
-    </script>
 </head>
-<body class="flex flex-col" style="background-color: #F5F5F4">
+<body class="flex flex-col" style="background-color: #fbfbfb">
     <div class="bg-stone-100 p-12 grow">
-        <img src="https://raw.githubusercontent.com/ideiaschatgpt/tts/main/api/logo.png" width="64px" height="64px" class="mx-auto"/>
-        <center class="text-6xl font-bold text-center">
+        <img src="logo.png" width="64px" height="64px" class="mx-auto"/>
+        <h1 class="text-6xl font-bold text-center">
             Ideias TTS
-        </center>
+        </h1>
         <p class="text-center pt-6">Conversor de texto em voz</p>
-        <p class="text-center pt-6">Crie Voiceovers realistas online! Insira qualquer texto para gerar uma fala e descarregue o áudio mp3 para qualquer fim. Faça um texto falado com vozes gerada por IA.</p>
+        <p class="text-center pt-6"><sup>Crie Voiceovers realistas online! Insira qualquer texto para gerar uma fala e descarregue o áudio mp3 para qualquer fim. Faça um texto falado com vozes AI.</sup></p>
     </div>
     <div class="bg-slate-200 md:mt-11 p-11 md:mx-auto h-2/4 md:w-3/5 md:rounded">
         <form onsubmit="event.preventDefault(); submitForm()">
@@ -155,7 +142,6 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
                 <option value="en_female_ht_f08_wonderful_world">Dramático</option>
             </select>
             <button class="rounded bg-slate-100 p-1 w-full sm:w-24 sm:float-right mt-2" id="submit" disabled>Gerar</button>
-            <button class="rounded bg-slate-100 p-1 w-full sm:w-24 sm:float-right mt-2" id="pasteButton" onclick="pasteText()">Colar Texto</button>
         </form>
     
     </div>
@@ -174,6 +160,7 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
     </div>
 </body>
 </html>
+
 
 <?php
 } else {
