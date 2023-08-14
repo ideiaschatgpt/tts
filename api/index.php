@@ -61,9 +61,7 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
 <body class="flex flex-col" style="background-color: #F5F5F4">
     <div class="bg-stone-100 p-12 grow">
         <img src="api/logo.png" width="64px" height="64px" class="mx-auto"/>
-        <center class="text-6xl font-bold text-center">
-            Ideias TTS
-        </center>
+
         <p class="text-center pt-6">Conversor de texto em voz</p>
         <p class="text-center pt-6">Crie Voiceovers realistas online! Insira qualquer texto para gerar uma fala e descarregue o áudio mp3 para qualquer fim. Faça um texto falado com vozes gerada por IA.</p>
     </div>
