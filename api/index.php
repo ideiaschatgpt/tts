@@ -1,3 +1,27 @@
+<?php
+session_start();
+
+// Verifica se o usuário enviou o formulário
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Define o PIN correto
+    $pinCorreto = "2008";
+
+    // Verifica se o PIN inserido está correto
+    if ($_POST["pin"] === $pinCorreto) {
+        // PIN correto, armazena o status de autenticação na sessão
+        $_SESSION["autenticado"] = true;
+        header("Location: index.php"); // Redireciona para a página protegida
+        exit();
+    } else {
+        // PIN incorreto, exibe uma mensagem de erro
+        $mensagemErro = "PIN inválido. Por favor, tente novamente.";
+    }
+}
+
+// Verifica se o usuário está autenticado
+if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
+    // O usuário está autenticado, exibe o conteúdo protegido
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,19 +44,7 @@
             font-weight:bold;
         }
     </style>
-        <script>
-        function pasteText() {
-    navigator.clipboard.readText()
-        .then(text => {
-            document.getElementById('text').value = text;
-            onTextareaInput();
-        })
-        .catch(err => {
-            console.error('Falha ao colar texto:', err);
-        });
-}
 
-    </script>
 </head>
 <body class="flex flex-col" style="background-color: #F5F5F4">
     <div class="bg-stone-100 p-12 grow">
@@ -131,7 +143,6 @@
                 <option value="en_female_ht_f08_wonderful_world">Dramático</option>
             </select>
             <button class="rounded bg-slate-100 p-1 w-full sm:w-24 sm:float-right mt-2" id="submit" disabled>Gerar</button>
-            <button class="rounded bg-slate-100 p-1 w-full sm:w-24 sm:float-right mt-2" id="pasteButton" onclick="pasteText()">Colar Texto</button>
         </form>
     
     </div>
@@ -150,3 +161,54 @@
     </div>
 </body>
 </html>
+
+<?php
+} else {
+    // O usuário não está autenticado, exibe o formulário de PIN
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acesso com PIN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Ideias TTS</h3>
+                    <?php if (isset($mensagemErro)) : ?>
+                        <div class="alert alert-danger" role="alert"><?php echo $mensagemErro; ?></div>
+                    <?php endif; ?>
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label for="pin" class="form-label">INSIRA O PIN:</label>
+                            <input type="password" class="form-control" id="pin" name="pin" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Acessar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<?php
+}
+?>
