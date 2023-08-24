@@ -71,80 +71,80 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
         <form onsubmit="event.preventDefault(); submitForm()">
             <label for="text" hidden>Conversão de texto em fala</label>
             <p class="rounded bg-slate-100 h-8 w-16 text-center leading-8 mb-2 float-right" id="charcount">999/999</p>
-            <textarea id="text" name="text" placeholder="Converter texto em discurso com vozes de inteligência artificial moderna." oninput="onTextareaInput()" class="h-full w-full rounded p-2 bg-slate-100" disabled></textarea><br/>
+            <textarea id="text" name="text" placeholder="Converter texto em discurso com vozes de inteligência artificial moderna." oninput="onTextareaInput()" class="h-full w-full rounded p-2 bg-slate-100" ></textarea><br/>
             <label for="voice" hidden>Voz para usar</label>
-            <select name="voice" id="voice" class="rounded p-1 bg-slate-100 mt-2 w-full sm:w-1/2" disabled>
+            <select name="voice" id="voice" class="rounded p-1 bg-slate-100 mt-2 w-full sm:w-1/2" >
 
-                <option disabled class="bold">Português Brasil</option>
+                <option  class="bold">Português Brasil</option>
                 <option value="br_001">Feminino 1</option>
                 <option value="br_003">Feminino 2</option>
                 <option value="br_004">Feminino 3</option>
                 <option value="br_005">Masculino</option>
-                <option disabled></option>
+                <option ></option>
 
-                <option disabled class="bold">Inglês EUA</option>
+                <option  class="bold">Inglês EUA</option>
                 <option value="en_us_001">Feminino</option>
                 <option value="en_us_006">Masculino 1</option>
                 <option value="en_us_007">Masculino 2</option>
                 <option value="en_us_009">Masculino 3</option>
                 <option value="en_us_010">Masculino 4</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Inglês Reino Unido</option>
+                <option  class="bold">Inglês Reino Unido</option>
                 <option value="en_uk_001">Masculino 1</option>
                 <option value="en_uk_003">Masculino 2</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Inglês Austrália</option>
+                <option  class="bold">Inglês Austrália</option>
                 <option value="en_au_001">Feminino</option>
                 <option value="en_au_002">Masculino</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Francês</option>
+                <option  class="bold">Francês</option>
                 <option value="fr_001">Masculino 1</option>
                 <option value="fr_002">Masculino 2</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Alemão</option>
+                <option  class="bold">Alemão</option>
                 <option value="de_001">Feminino</option>
                 <option value="de_002">Masculino</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Espanhol</option>
+                <option  class="bold">Espanhol</option>
                 <option value="es_002">Masculino</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Espanhol México</option>
+                <option  class="bold">Espanhol México</option>
                 <option value="es_mx_002">Masculino</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Indonésio</option>
+                <option  class="bold">Indonésio</option>
                 <option value="id_001">Feminino</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Japonês</option>
+                <option  class="bold">Japonês</option>
                 <option value="jp_001">Feminino 1</option>
                 <option value="jp_003">Feminino 2</option>
                 <option value="jp_005">Feminino 3</option>
                 <option value="jp_006">Masculino</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Coreano</option>
+                <option  class="bold">Coreano</option>
                 <option value="kr_002">Masculino 1</option>
                 <option value="kr_004">Masculino 2</option>
                 <option value="kr_003">Feminino</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Personagens</option>
+                <option  class="bold">Personagens</option>
                 <option value="en_us_ghostface">Ghostface (Pânico)</option>
                 <option value="en_us_chewbacca">Chewbacca (Star Wars)</option>
                 <option value="en_us_c3po">C3PO (Star Wars)</option>
                 <option value="en_us_stitch">Stitch (Lilo & Stitch)</option>
                 <option value="en_us_stormtrooper">Stormtrooper (Star Wars)</option>
                 <option value="en_us_rocket">Rocket (Guardiões da Galáxia)</option>
-                <option disabled></option>
+                <option ></option>
     
-                <option disabled class="bold">Cantando</option>
+                <option  class="bold">Cantando</option>
                 <option value="en_female_f08_salut_damour">Alto</option>
                 <option value="en_male_m03_lobby">Tenor</option>
                 <option value="en_male_m03_sunshine_soon">Sunshine Soon</option>
