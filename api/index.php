@@ -154,7 +154,7 @@ if (isset($_SESSION["autenticado"]) && $_SESSION["autenticado"]) {
                 <option value="en_male_m2_xhxs_m03_silly">Esquilo</option>
                 <option value="en_female_ht_f08_wonderful_world">Dramático</option>
             </select>
-            <button class="rounded bg-slate-100 p-1 w-full sm:w-24 sm:float-right mt-2" id="submit" disabled>Gerar</button>
+            <button class="rounded bg-slate-100 p-1 w-full sm:w-24 sm:float-right mt-2" id="submit" >Gerar</button>
             <button class="rounded bg-slate-100 p-1 w-full sm:w-24 sm:float-right mt-2" id="pasteButton" onclick="pasteText()">Colar Texto</button>
         </form>
     
