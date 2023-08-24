@@ -1,4 +1,3 @@
-<?php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,10 +137,3 @@
     </div>
 </body>
 </html>
-
-<?php
-} else {
-    // O usuário não está autenticado, exibe o formulário de PIN
-?>
-<!DOCTYPE html>
-?>
